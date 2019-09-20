@@ -1,0 +1,27 @@
+package snippet;
+
+public class Snippet {
+	//FileInputStream fis = new FileInputStream("C:\\OPEN DEMAND RHL_Y.xlsx");
+		        FileInputStream fis = new FileInputStream("C:\\Users\\shubham.o.gupta\\Desktop\\OPEN DEMAND RHL_Y.xlsx");
+				XSSFWorkbook workbook = new XSSFWorkbook(fis);
+				XSSFSheet sheet = workbook.getSheetAt(0);
+	                       
+		/*		Row row = sheet.getRow(1);
+				Cell cell = row.getCell(1);
+	                     System.out.println("Cell    :"+cell);
+	                     */
+				
+				int rowCount = sheet.getLastRowNum()-sheet.getFirstRowNum();
+	            System.out.println("Row count ="+rowCount);     
+	            String s1= sheet.getRow(2).getCell(1).toString();
+				System.out.println("Value  ="+sheet.getRow(2).getCell(1).toString());
+				System.out.println("Value  ="+sheet.getRow(2).getCell(2).toString());
+				System.out.println("Value  ="+sheet.getRow(2).getCell(3).toString());
+				System.out.println("Value  ="+sheet.getRow(2).getCell(4).toString());
+				System.out.println("Value  ="+sheet.getRow(2).getCell(5).toString());
+				
+				//sheet.getRow(2).getCell(5).get
+				//String cellval = cell.getStringCellValue();
+				//System.out.println("value    ="+cellval) 
+}
+
